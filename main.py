@@ -18,9 +18,7 @@ async def start(bot, update):
     await update.reply_text(
         text=f"Hi {update.from_user.mention}"
     )
-await Bot.send_chat_action(
-            message.chat.id, "typing"
-        )
+await Bot.send_chat_action(chat_id, "typing")
 
 @Bot.on_message(filters.command(["love"]) & filters.private)
 async def start(bot, update):
