@@ -89,7 +89,7 @@ ABOUT_BUTTONS = InlineKeyboardMarkup(
 
 
 @Bot.on_callback_query()
-async def cb_data(bot, update):
+async def start(bot, update):
     
     if update.data == "home":
         await update.message.edit_text(
