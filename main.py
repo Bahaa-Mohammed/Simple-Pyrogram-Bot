@@ -18,7 +18,15 @@ async def start(bot, update):
     await update.reply_text(
         text=f"Hi {update.from_user.mention}"
     )
-await Bot.send_chat_action(chat_id, "typing")
+
+@Bot.on_message(filters.command(["f"]) & filters.private)
+async def start(bot, update):
+    await bot.send_document(
+                    chat_id = message.chat.id,
+                    document = "https://t.me/c/1720035751/6",
+                    caption = f"`Converted: {fileExt} to pdf`"
+                )
+
 
 @Bot.on_message(filters.command(["love"]) & filters.private)
 async def start(bot, update):
