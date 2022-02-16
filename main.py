@@ -19,7 +19,7 @@ async def start(bot, update):
         text=f"Hi {update.from_user.mention}"
     )
 
-@Bot.on_message(filters.command(["start"]) & filters.private)
+@Bot.on_message(filters.command(["love"]) & filters.private)
 async def start(bot, update):
     await update.reply_text(
         text=f"Hi {update.from_user.mention}",
