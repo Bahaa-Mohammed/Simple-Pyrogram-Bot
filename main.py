@@ -21,7 +21,7 @@ async def start(bot, update):
 
 @Bot.on_message(filters.command(["f"]) & filters.private)
 async def start(bot, update):
-    await update.send_message(
+    await update.reply_text(
                         message.chat.id,
                         '`Syntax Error: noSuchPageNumber 🥴`'
                     )
