@@ -126,41 +126,5 @@ async def start(bot, update):
         reply_markup=START_BUTTONS
     )
 
- 
- ​@​Bot​.​on_inline_query​() 
- ​async​ ​def​ ​inline_query_handler​(​c​: ​Bot​, ​iq​: ​InlineQuery​): 
- ​    ​q​ ​=​ ​iq​.​query 
- ​    
- ​    ​me​ ​=​ ​await​ ​c​.​get_me​() 
- ​    ​res​ ​=​ [] 
- ​    ​if​ ​q_res_data​ ​is​ ​not​ ​None​: 
- ​        ​for​ ​file​ ​in​ ​q_res_data​: 
- ​            ​res​.​append​( 
- ​                ​InlineQueryResultArticle​( 
- ​                    ​title​=​file​[​'file_name'​], 
- ​                    ​description​=​f"​fok"​, 
- ​                    ​thumb_url​=​"https://cdn3.iconfinder.com/data/icons/education-vol-1-34/512/15_File_files_office-256" 
- ​                              ​".png"​, 
- ​                    ​input_message_content​=​InputTextMessageContent​( 
- ​                        ​message_text​=​f"fnkjhh​" 
- ​                    ), 
- ​                    ​reply_markup​=​InlineKeyboardMarkup​( 
- ​                        [ 
- ​                            [​InlineKeyboardButton​(​text​=​f"​Get this File"​, 
- ​                                                  ​url​=​f"http://t.me/​"​)] 
- ​                        ] 
- ​                    ) 
- ​                ) 
- ​            ) 
-  
- ​    ​if​ ​res​: 
- ​        ​await​ ​iq​.​answer​( 
- ​            ​results​=​res​, 
- ​            ​cache_time​=​0​, 
- ​            ​is_personal​=​False 
- ​        ) 
- ​    ​else​: 
- ​        ​await​ ​iq​.​answer​([])
-
 
 Bot.run()
