@@ -116,7 +116,7 @@ async def start(bot, update):
         await update.message.delete()
     
 
-@Bot.on_message(filters.private & filters.command(["start"]))
+@Bot.on_message(filters.command(["startt"]))
 async def start(bot, update):
     
     await update.reply_text(
