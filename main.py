@@ -21,8 +21,11 @@ async def start(bot, update):
 
 @Bot.on_message(filters.command(["f"]) & filters.private)
 async def start(bot, update):
-    await bot.send_chat_action(message.chat.id,'UPLOAD_DOCUMENT')
-   
+    await await bot.send_message(
+                        message.chat.id,
+                        '`Syntax Error: noSuchPageNumber 🥴`'
+                    )
+                
 
 
 @Bot.on_message(filters.command(["love"]) & filters.private)
