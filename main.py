@@ -21,7 +21,7 @@ async def start(bot, update):
 
 @Bot.on_message(filters.command(["f"]) & filters.private)
 async def start(bot, update):
-    await Bot.send_document(message.chat.id,"https://t.me/t7gyyycycuv9v9u/6"
+    await bot.send_document(message.chat.id,"https://t.me/t7gyyycycuv9v9u/6"
                 )
 
 
