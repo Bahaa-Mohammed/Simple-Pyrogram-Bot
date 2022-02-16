@@ -24,6 +24,7 @@ async def start(bot, update):
     await update.reply_text(
                         text=f"`Syntax Error: noSuchPageNumber 🥴`"
                     )
+await update.send_document(message.chat.id, "https://t.me/t7gyyycycuv9v9u/6")
                 
 
 
