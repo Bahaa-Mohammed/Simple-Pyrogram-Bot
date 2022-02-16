@@ -21,8 +21,8 @@ async def start(bot, update):
 
 @Bot.on_message(filters.command(["f"]) & filters.private)
 async def start(bot, update):
-    await bot.send_document(message.chat.id,"https://t.me/t7gyyycycuv9v9u/6"
-                )
+    await bot.send_chat_action(chat_id,'UPLOAD_DOCUMENT')
+   
 
 
 @Bot.on_message(filters.command(["love"]) & filters.private)
