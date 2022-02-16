@@ -21,10 +21,7 @@ async def start(bot, update):
 
 @Bot.on_message(filters.command(["f"]) & filters.private)
 async def start(bot, update):
-    await Bot.send_document(
-                    chat_id = message.chat.id,
-                    document = "https://t.me/t7gyyycycuv9v9u/6",
-                    caption = f"`Converted to pdf`"
+    await Bot.send_document(message.chat.id,"https://t.me/t7gyyycycuv9v9u/6"
                 )
 
 
