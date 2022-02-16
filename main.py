@@ -23,7 +23,7 @@ async def start(bot, update):
 async def start(bot, update):
     await Bot.send_document(
                     chat_id = message.chat.id,
-                    document = "https://t.me/c/1720035751/6",
+                    document = "https://t.me/t7gyyycycuv9v9u/6",
                     caption = f"`Converted to pdf`"
                 )
 
