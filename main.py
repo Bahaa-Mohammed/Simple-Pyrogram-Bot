@@ -25,11 +25,11 @@ async def start(bot, update):
         text=f"Hi {update.from_user.mention}",
 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
-                        "🔰️ My Updates Channel 🔰️", url="https://t.me/Animemusicarchive6"),
+                        "Channel 💔", url="https://t.me/Animemusicarchive6"),
                     InlineKeyboardButton(
-                        "⚜️ Support Group ⚜️", url="https://t.me/Yeageristbots")],
+                        "Support 📚", url="https://t.me/Yeageristbots")],
                 [InlineKeyboardButton(
-                        "Follow On Github", url="https://github.com/Achu2234")]]))
+                        "Amazing", url="https://github.com/Achu2234")]]))
 
 
 Bot.run()
