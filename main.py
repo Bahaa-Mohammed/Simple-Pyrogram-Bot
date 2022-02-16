@@ -1,4 +1,6 @@
 from pyrogram import Client, filters
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+
 
 BOT_TOKEN = "5245470448:AAHJ0UqCVnuehEREuBqorI9NkzcQVU1K9KU" # your bot token from telegram.me/BotFather. Sample :- "12345:abcdefghijklmnop"
 API_ID = "17356724" # your api id from my.telegram.org. Sample :- int("123456")
@@ -16,4 +18,18 @@ async def start(bot, update):
     await update.reply_text(
         text=f"Hi {update.from_user.mention}"
     )
+
+@Bot.on_message(filters.command(["start"]) & filters.private)
+async def start(bot, update):
+    await update.reply_text(
+        text=f"Hi {update.from_user.mention}",
+reply_markup=InlineKeyboardMarkup([[
+                    InlineKeyboardButton(
+                        "🔰️ My Updates Channel 🔰️", url="https://t.me/Animemusicarchive6"),
+                    InlineKeyboardButton(
+                        "⚜️ Support Group ⚜️", url="https://t.me/Yeageristbots")],
+                [InlineKeyboardButton(
+                        "Follow On Github", url="https://github.com/Achu2234")]]))
+
+
 Bot.run()
