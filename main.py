@@ -15,10 +15,7 @@ Bot = Client(
 
 @Bot.on_message(filters.command(["start"]) & filters.private)
 async def start(bot, update):
-        await bot.send_chat_action(
-            message.chat.id, "typing"
-        )
-        sleep(5)
+        
     await update.reply_text(
         text=f"Hi {update.from_user.mention}"
     )
