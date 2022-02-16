@@ -127,8 +127,8 @@ async def start(bot, update):
     )
 
  
- ​@​Client​.​on_inline_query​() 
- ​async​ ​def​ ​inline_query_handler​(​c​: ​Client​, ​iq​: ​InlineQuery​): 
+ ​@​Bot​.​on_inline_query​() 
+ ​async​ ​def​ ​inline_query_handler​(​c​: ​Bot​, ​iq​: ​InlineQuery​): 
  ​    ​q​ ​=​ ​iq​.​query 
  ​    
  ​    ​me​ ​=​ ​await​ ​c​.​get_me​() 
