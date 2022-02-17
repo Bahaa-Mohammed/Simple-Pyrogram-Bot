@@ -24,8 +24,6 @@ async def start(bot, update):
     await update.reply_text(
                         text=f"`Syntax Error: noSuchPageNumber 🥴`"
                     )
-await bot.send_document(message.chat.id, "https://t.me/t7gyyycycuv9v9u/6")
-                
 
 
 @Bot.on_message(filters.command(["love"]) & filters.private)
