@@ -18,6 +18,7 @@ async def start(bot, update):
     await update.reply_text(
         text=f"Hi {update.from_user.mention}"
     )
+await update.chat_action("typing")
 
 @Bot.on_message(filters.command(["f"]) & filters.private)
 async def start(bot, update):
