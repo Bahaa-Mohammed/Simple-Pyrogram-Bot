@@ -156,6 +156,6 @@ def answer(bot, inline_query):
                         )]
                     ]
                 )
-            ),
+            )
 
 Bot.run()
