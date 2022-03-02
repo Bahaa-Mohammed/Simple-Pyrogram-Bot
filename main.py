@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-
+import asyncio
 
 BOT_TOKEN = "5245470448:AAHJ0UqCVnuehEREuBqorI9NkzcQVU1K9KU" # your bot token from telegram.me/BotFather. Sample :- "12345:abcdefghijklmnop"
 API_ID = "17356724" # your api id from my.telegram.org. Sample :- int("123456")
@@ -16,6 +16,7 @@ Bot = Client(
 @Bot.on_message(filters.command(["start"]) & filters.private)
 async def start(bot, update):
     await update.reply_chat_action("typing")
+    await asyncio.sleep(2)
     await update.reply_text(
         text=f"Hi {update.from_user.mention}"
     )
