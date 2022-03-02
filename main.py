@@ -137,7 +137,7 @@ async def start(bot, update):
 
 
 @Bot.on_inline_query()
-def answer(bot, inline_query):
+async def start(bot, inline_query):
     inline_query.answer(
         results=[
             InlineQueryResultArticle(
