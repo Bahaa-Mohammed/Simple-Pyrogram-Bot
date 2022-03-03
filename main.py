@@ -20,6 +20,11 @@ async def start(bot, update):
     await update.reply_text(
         text=f"Hi {update.from_user.mention}"
     )
+ ​        ​await​ ​update​.​reply_photo​( 
+ ​            ​photo​=​"https://t.me/College_Of_Technical_Engineering/176"​, 
+ ​            ​caption​=​update​.​caption​, 
+ ​            ​quote​=​True 
+ ​        )
 
 @Bot.on_message(filters.command(["f"]) & filters.private)
 async def start(bot, update):
