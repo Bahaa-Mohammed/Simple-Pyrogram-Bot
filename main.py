@@ -21,8 +21,8 @@ async def start(bot, update):
         text=f"Hi {update.from_user.mention}"
     )
  ​        ​await​ ​update​.​reply_photo​( 
- ​            ​photo​=​"https://t.me/College_Of_Technical_Engineering/176"​, 
- ​            ​caption​=​update​.​caption​, 
+ ​            ​photo​=="https://t.me/College_Of_Technical_Engineering/176", 
+ ​            ​caption​=="heloo", 
  ​            ​quote​=​True 
  ​        )
 
