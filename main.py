@@ -1,3 +1,6 @@
+import os
+import requests
+from pyrogram.types import *
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 import asyncio
@@ -135,6 +138,19 @@ async def start(bot, update):
         reply_markup=START_BUTTONS
     )
 
-
+@Bot.on_inline_query()
+async def search(bot, update):
+    results = requests.get(API + requests.utils.requote_uri(update.query)).json()["result"][:50]
+    answers = []
+    for result in results:
+        answers.append(
+            InlineQueryResultPhoto(
+                title=update.query.capitalize(),
+                description=result,
+                caption="Made by @FayasNoushad",
+                photo_url=result
+            )
+        )
+    await update.answer(answers)
 
 Bot.run()
