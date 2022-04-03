@@ -112,15 +112,13 @@ async def start(bot, update):
             reply_markup=HELP_BUTTONS
         )
     
-    elif update.data == "about":
+    else: update.data == "about":
         await update.message.edit_text(
             text=ABOUT_TEXT,
             disable_web_page_preview=True,
             reply_markup=ABOUT_BUTTONS
         )
     
-    else:
-        await update.message.delete()
     
 
 @Bot.on_message(filters.command(["startt"]))
