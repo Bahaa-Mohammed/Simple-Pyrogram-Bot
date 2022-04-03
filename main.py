@@ -134,4 +134,25 @@ async def start(bot, update):
     )
 
 
+START_BUT = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton('ok', callback_data='ok'),
+            InlineKeyboardButton('yes', callback_data='yes'),
+            InlineKeyboardButton('no', callback_data='no')
+        ]
+    ]
+)
+
+
+@Bot.on_message(filters.command(["test"]))
+async def start(bot, update):
+    
+    await update.reply_text(
+        text=START_TEXT.format(update.from_user.mention),
+        disable_web_page_preview=True,
+        quote=True,
+        reply_markup=START_BUT
+    )
+
 Bot.run()
