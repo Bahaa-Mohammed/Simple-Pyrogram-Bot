@@ -3,16 +3,13 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 import asyncio
 
-BOT_TOKEN = "5146614420:AAEPcYF1acykg15nW6lOES8vhDRcDRzcci4" # your bot token from telegram.me/BotFather. Sample :- "12345:abcdefghijklmnop"
-API_ID = "3835436" # your api id from my.telegram.org. Sample :- int("123456")
-API_HASH = "454cda84db57909075dcf14eafc84f7b" # your api hash from my.telegram.org Sample :- "fayasnoushad123"
-
 Bot = Client(
-    "Simple-Pyrogram-Bot",
-    bot_token=BOT_TOKEN,
-    api_id=int(API_ID),
-    api_hash=API_HASH
+    "Pyrogram-example-bot",
+    bot_token = os.environ["BOT_TOKEN"],
+    api_id = int(os.environ["API_ID"]),
+    api_hash = os.environ["API_HASH"]
 )
+
 
 @Bot.on_message(filters.command(["start"]) & filters.private)
 async def start(bot, update):
