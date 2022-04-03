@@ -155,4 +155,21 @@ async def start(bot, update):
         reply_markup=START_BUT
     )
 
+@Bot.on_callback_query()
+async def start(bot, update):
+    
+    if update.data == "ok":
+        await update.message.edit_text(
+            text=START_TEXT.format(update.from_user.mention),
+            disable_web_page_preview=True,
+            reply_markup=START_BUTTONS
+        )
+    
+    elif update.data == "yes":
+        await update.message.edit_text(
+            text=HELP_TEXT,
+            disable_web_page_preview=True,
+            reply_markup=HELP_BUTTONS
+        )
+
 Bot.run()
